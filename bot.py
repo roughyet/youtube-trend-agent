@@ -1,3 +1,11 @@
+import sys
+import os
+
+# Python 3.14 compatibility fix
+if sys.version_info >= (3, 14):
+    import warnings
+    warnings.filterwarnings('ignore', category=DeprecationWarning)
+
 import requests
 import json
 import google.generativeai as genai
